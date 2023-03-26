@@ -64,7 +64,7 @@ mongoose
   .catch((error) => console.log(`${error} did not connect`));
 
 
-//to deploy code
+//to deploy code condition
   if (process.env.NODE_ENV !== "development") {
 app.use(express.static(path.join(__dirname,"./client/build")))
 
