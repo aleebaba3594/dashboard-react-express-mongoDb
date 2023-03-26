@@ -60,16 +60,6 @@ mongoose
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
     // User.insertMany(dataUser);
-
-
-    //to deploy code condition
-  if (process.env.NODE_ENV !== "development") {
-    app.use(express.static(path.join(__dirname,"./client/build")))
-    
-    app.get('*',(req, res) => {
-      res.sendFile(path.join(__dirname,"client/build/index.html"))
-    })
-    }
   })
   .catch((error) => console.log(`${error} did not connect`));
 
